@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primer Parcial - ITLA - Surge & GitHub Actions</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --success: #22c55e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(34, 197, 94, 0.2);
+      color: var(--success);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      border: 1px solid rgba(34, 197, 94, 0.4);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    p {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .info-box {
+      background: rgba(15, 23, 42, 0.6);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .info-box ul {
+      list-style-type: none;
+    }
+
+    .info-box li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .info-box li:last-child {
+      margin-bottom: 0;
+    }
+
+    .icon {
+      margin-right: 10px;
+      color: var(--accent);
+    }
+
+    footer {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">🚀 Despliegue Exitoso con GitHub Actions</div>
+    <h1>Primer Parcial - Electiva 2</h1>
+    <p>Página desplegada automáticamente en <strong>Surge.sh</strong> mediante Integración Continua (CI/CD).</p>
+    
+    <div class="info-box">
+      <ul>
+        <li><span class="icon">💻</span> <strong>Asignatura:</strong> Electiva 2 - ITLA</li>
+        <li><span class="icon">🔄</span> <strong>Pipeline:</strong> GitHub Actions CI/CD</li>
+        <li><span class="icon">🌐</span> <strong>Hosting:</strong> Surge.sh</li>
+        <li><span class="icon">🔒</span> <strong>Seguridad:</strong> GitHub Secrets protegidos</li>
+      </ul>
+    </div>
+
+    <footer>
+      Instituto Tecnológico de Las Américas (ITLA)
+    </footer>
+  </div>
+</body>
+</html>
+
