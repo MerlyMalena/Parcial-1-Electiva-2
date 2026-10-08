@@ -1,0 +1,32 @@
+name: Despliegue en Surge.sh #Titulo que se ve en la pestaña de Actions
+
+on: # Inicio trigger
+  push:
+    branches:
+      - main # Fin trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Descarga el código del repositorio
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      # 2. Configura Node.js
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 3. Instala Surge en el entorno virtual
+      - name: Instalar Surge
+        run: npm install -g surge
+
+      # 4. Despliega la carpeta raíz a un subdominio único en Surge
+      - name: Desplegar a Surge.sh
+        run: surge ./ parcial1-electiva-merlymalena.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        env:
+          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
